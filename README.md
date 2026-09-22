@@ -2,7 +2,7 @@
 
 A production-style Python + PostgreSQL data engineering project built around the requirements of a junior/entry-level Data Engineer / Python Data Engineer role.
 
-## What this project demonstrates
+
 
 - **Python:** modular ETL, validation, concurrency, CLI, logging, error handling
 - **Linux:** shell commands, Makefile, environment variables, Docker workflow
@@ -47,7 +47,7 @@ A production-style Python + PostgreSQL data engineering project built around the
                  tracks every run
 ```
 
-## Project structure
+##  structure
 
 ```text
 resilient_order_pipeline/
