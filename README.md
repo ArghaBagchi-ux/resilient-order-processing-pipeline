@@ -178,16 +178,3 @@ Validation is CPU-parallelized with `ProcessPoolExecutor`. Worker count is confi
 | Pipeline exception | Run is marked `FAILED` with metrics |
 | Re-running same file | No duplicate primary keys |
 
-
-## GitHub commands
-
-```bash
-git init
-git add .
-git commit -m "Build resilient order processing pipeline"
-git branch -M main
-git remote add origin https://github.com/<YOUR_USERNAME>/resilient-order-processing-pipeline.git
-git push -u origin main
-```
-
-Do not commit `.env`, database passwords, `.venv`, generated datasets, or other secrets.
