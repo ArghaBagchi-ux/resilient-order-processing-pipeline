@@ -178,31 +178,6 @@ Validation is CPU-parallelized with `ProcessPoolExecutor`. Worker count is confi
 | Pipeline exception | Run is marked `FAILED` with metrics |
 | Re-running same file | No duplicate primary keys |
 
-## Resume-ready project description
-
-**Resilient Order Processing Pipeline — Python, PostgreSQL, Docker, Linux**
-
-Built a fault-tolerant data processing pipeline in Python that ingests large CSV datasets in memory-efficient chunks, validates records concurrently, loads data into PostgreSQL using idempotent upserts, retries transient database failures with exponential backoff, and routes invalid records to a dead-letter table. Added run-level audit tracking, SQL analytics, automated tests, Dockerized PostgreSQL, Makefile-based Linux workflows, and GitHub Actions CI.
-
-## Interview talking points
-
-**Why PostgreSQL?**  
-It provides durable relational storage, constraints, indexes and transactional behavior for the processed data.
-
-**Why chunks?**  
-A large CSV should not require the whole file to fit in RAM. Chunking bounds memory usage.
-
-**Why upsert?**  
-Pipelines can be retried. A stable primary key plus upsert makes repeated processing safe.
-
-**Why dead-letter records?**  
-Bad data should be isolated and investigated rather than silently dropped.
-
-**Why multiprocessing?**  
-Validation is independent per record, so CPU work can be distributed across local processes.
-
-**Is this a distributed system?**  
-The current project demonstrates data-intensive and fault-tolerant patterns on a single machine. A natural next step is replacing the local worker pool with Spark and/or Kafka + Airflow for multi-node/distributed execution.
 
 ## GitHub commands
 
